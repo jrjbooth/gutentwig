@@ -1,0 +1,62 @@
+{% block html_head_container %}
+
+    {% include 'partial/core/html-header.twig' %}
+
+	{% block head %}
+	{% endblock %}
+
+	</head>
+
+{% endblock %}
+
+    {% spaceless %}
+
+		<body class="{{body_class}}" data-template="base.twig">
+
+			{% block header %}
+
+				<header id="header" >
+
+					{% include 'section/core/header.twig' %}
+
+				</header>
+
+            {% endblock %}
+
+			<div class="content-wrapper {{sidebar_class}}">
+
+				{% block content %}
+
+					Sorry, no content
+
+				{% endblock %}
+
+			</div>
+
+			{% if sidebar %}
+
+				<aside class="layout-sidebar">
+
+					{{sidebar}}
+
+				</aside>
+
+			{% endif %}
+
+			{% block footer %}
+
+				<footer id="footer">
+
+					{% include 'section/core/footer.twig' %}
+
+				</footer>
+
+				{{ function('wp_footer') }}
+
+			{% endblock %}
+
+		</body>
+
+	{% endspaceless %}
+
+</html>

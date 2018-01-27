@@ -14,7 +14,7 @@ $post = Timber::query_post();
 $context['post'] = $post;
 
 if ( post_password_required( $post->ID ) ) {
-	Timber::render( 'single-password.twig', $context );
+	Timber::render( 'page/core/single-password.twig', $context );
 } else {
-	Timber::render( array( 'single-' . $post->ID . '.twig', 'single-' . $post->post_type . '.twig', 'single.twig' ), $context );
+	Timber::render( array( 'page/single-' . $post->ID . '.twig', 'page/single-' . $post->post_type . '.twig', 'page/core/single.twig' ), $context );
 }
