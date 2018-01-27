@@ -61,4 +61,10 @@ class StarterSite extends TimberSite {
 
 new StarterSite();
 
+
+function theme_scripts() {
+    wp_enqueue_script( 'site-js', get_stylesheet_directory_uri() . '/static/site.js', array('jquery'), false, true );
+}
+add_action( 'wp_enqueue_scripts', 'theme_scripts' );
+
 include __DIR__ . '/blocks/blocks.php';

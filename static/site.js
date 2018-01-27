@@ -1,5 +1,8 @@
 jQuery( document ).ready( function( $ ) {
 
-  // Your JavaScript goes here
+
+    $('#nav-toggle').click( function () {
+        $('#nav').toggleClass('closed');
+    });
 
 });

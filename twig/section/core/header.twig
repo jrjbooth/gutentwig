@@ -2,17 +2,46 @@
 
     <div class="container">
 
-        <h1 class="hdr-logo" role="banner">
+        <div id="nav" class="">
 
-            <a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
+            <div class="toggle" id="nav-toggle"><i class="fa fa-2x fa-times" aria-hidden="true"></i></div>
 
-        </h1>
+            <h1 class="hdr-logo" role="banner">
 
-        <nav id="nav-main" class="nav-main" role="navigation">
+                <a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
 
-            {% include "partial/core/menu.twig" with {'menu': menu.get_items} %}
+            </h1>
 
-        </nav>
+            <nav>
+
+                {% include "partial/core/menu.twig" with {'menu': menu.get_items} %}
+
+            </nav>
+
+            <div class="footer">
+
+                <ul class="social">
+                    <li>
+                        <a href="https://twitter.com/boothy02">
+                            <span class="fab fa-twitter"></span>
+                            <span class="screen-reader-text">Find us on Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:james@jbooth.me">
+                            <span class="fa fa-envelope"></span>
+                            <span class="screen-reader-text">Email Us</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="copyright">
+                    &copy; {{ "now" | date("Y") }} James Booth
+                </div>
+
+            </div>
+
+
 
     </div>
 
