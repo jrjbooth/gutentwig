@@ -1,0 +1,25 @@
+$prime-light: lighten($prime, $lighten-amount);
+$prime-dark: darken($prime, $darken-amount);
+$prime-overlay: transparentize($prime, $overlay-transparency);
+
+$second-light: lighten($second, $lighten-amount);
+$second-dark: darken($second, $darken-amount);
+$second-overlay: transparentize($second, $overlay-transparency);
+
+$tertiary-light: lighten($tertiary, $lighten-amount);
+$tertiary-dark: darken($tertiary, $darken-amount);
+$tertiary-overlay: transparentize($tertiary, $overlay-transparency);
+
+$grey-light: lighten($grey, $lighten-amount);
+$grey-dark: darken($grey, $darken-amount);
+$grey-overlay: transparentize($grey, $overlay-transparency);
+
+$light-light: lighten($light, $lighten-amount);
+$light-dark: darken($light, $darken-amount);
+$light-overlay: transparentize($light, $overlay-transparency);
+
+$dark-light: lighten($dark, $lighten-amount);
+$dark-dark: darken($dark, $darken-amount);
+$dark-overlay: transparentize($dark, $overlay-transparency);
+
+$overlay-color: transparentize(#000000, $overlay-transparency);

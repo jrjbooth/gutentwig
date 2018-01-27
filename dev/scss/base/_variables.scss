@@ -1,0 +1,32 @@
+//Colour
+$grey: #F2F2F2;
+$light: #C4C4C4;
+$dark: #424242;
+$green: #8BC34A;
+$red: #F44336;
+$purple: #9B59B6;
+$yellow: #FFC107;
+$prime: $purple;
+$second: $red;
+$tertiary: $green;
+$lighten-amount: 20%;
+$darken-amount: 30%;
+$overlay-transparency: 0.5;
+
+//Content width
+$max-width: 1200px; //max content width
+$slim-width: 800px;
+$desktop: 800px;
+$tablet: 500px;
+$mobile: 400px;
+
+//Shape
+$container-padding: 0 0.5em;
+$border-radius: 1em;
+
+//Animation
+$transition-time: 0.3s;
+$transition-function: ease;
+$transition: $transition-function $transition-time;
+
+

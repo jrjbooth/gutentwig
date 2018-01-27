@@ -1,0 +1,9 @@
+@mixin bp($device) {
+    @if $device == desktop {
+        @media (min-width: $desktop) { @content ; }
+    }
+
+    @else if $device == tablet {
+        @media (min-width: $tablet) { @content ; }
+    }
+}

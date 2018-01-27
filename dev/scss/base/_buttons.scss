@@ -1,0 +1,101 @@
+.button {
+    padding: 0.5em 1em;
+    margin: 0 0.5em;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: solid 2px;
+    line-height: 3em;
+    transition: $transition;
+    @include border-radius($border-radius);
+    text-transform: uppercase;
+    background-color: aqua;
+    
+    @include bp(tablet) {
+        padding: 0.5em 2em;
+    }
+    
+    //color
+    &.prime {
+        border-color: $prime;
+        background-color: $prime;
+        color: white;
+
+        &:hover {
+            background-color: $prime-light;
+            border-color: $prime-light;
+
+        }
+        
+        &:focus{
+            background-color: $grey;
+            border-color: $grey; 
+            color: $dark;
+            
+        }
+        
+        &.alt-text {
+            color: invert(white);
+        }
+
+    }
+
+    &.second {
+        border-color: $second;
+        background-color: $second;
+        color: $dark;
+
+        &:hover {
+            background-color: $second-light;
+            border-color: $second-light;
+            
+        }
+        
+        &:focus{
+            background-color: $grey;
+            border-color: $grey; 
+            
+        }
+        
+        &.alt-text {
+            color: white;
+        }
+
+    }
+
+    &.tertiary {
+        border-color: $tertiary;
+        color: $tertiary;
+
+        &:hover {
+            background-color: $tertiary;
+            color: white;
+
+        }
+        
+                
+        &.alt-text {
+            color: invert($tertiary);
+        }
+
+    }
+    
+    &.alt {
+        &:hover{
+            background-color: $grey;
+            border-color: $grey; 
+            color: $dark;
+        }
+        &:focus{
+            background-color: white;
+            
+        }
+    }
+    
+    //shape
+    &.rounded {
+        @include border-radius(0);
+        
+    }
+        
+}
