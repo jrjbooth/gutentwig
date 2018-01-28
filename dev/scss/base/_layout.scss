@@ -1,0 +1,8 @@
+.content-wrapper {
+    width: 100%;
+    overflow: hidden;
+    @include bp(desktop){
+        width: calc(100% - 20em);
+        margin-left: 20em;
+    }
+}

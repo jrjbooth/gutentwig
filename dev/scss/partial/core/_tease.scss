@@ -1,0 +1,61 @@
+//article.tease {
+//    display: inline-block;
+//    @extend .card;
+//    @include bp(tablet){
+//        width: calc((100% / 2) - (1em / 2));
+//        &:nth-child(2n){
+//            margin-left: 1em;
+//        }
+//    }
+//}
+
+article.tease {
+    margin: 0 0 1em 0;
+    @include border-radius($border-radius);
+    @extend .card;
+
+    > .background-image {
+        height: 12em;
+        @include border-radius($border-radius);
+        @extend .shadow;
+
+        > .overlay {
+            height: 50%;
+            width: 100%;
+            @include linearGradient(transparentize(#000000, 0.3), transparentize(#000000, 1));
+            @include border-radius($border-radius $border-radius 0 0);
+            padding: 1em;
+            box-sizing: border-box;
+
+            > h3 {
+                color: white;
+                margin: 0;
+
+            }
+
+        }
+
+    }
+
+    p {
+        min-height: 5em;
+        padding: 0.5em;
+        margin: 0;
+        vertical-align: middle;
+
+    }
+
+    @include bp(desktop) {
+        width: calc((100% / 3) - (4em / 3));
+        display: inline-block;
+        vertical-align: top;
+        margin: 1em 2em 0 0;
+
+        &:nth-child(3n) {
+            margin-right: 0;
+
+        }
+
+    }
+
+}

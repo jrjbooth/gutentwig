@@ -6,7 +6,7 @@ $green: #8BC34A;
 $red: #F44336;
 $purple: #9B59B6;
 $yellow: #FFC107;
-$prime: $purple;
+$prime: $dark;
 $second: $red;
 $tertiary: $green;
 $lighten-amount: 20%;
@@ -28,5 +28,7 @@ $border-radius: 1em;
 $transition-time: 0.3s;
 $transition-function: ease;
 $transition: $transition-function $transition-time;
+
+
 
 

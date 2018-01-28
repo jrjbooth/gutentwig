@@ -1,0 +1,14 @@
+<section class="tease">
+
+    <div class="container">
+
+        {% for post in posts %}
+
+            {% include ['partial/tease-'~post.post_type~'.twig', 'partial/core/tease.twig'] %}
+
+        {% endfor %}
+
+    </div>
+
+</section>
+

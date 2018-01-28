@@ -1,15 +1,16 @@
 .button {
-    padding: 0.5em 1em;
+    padding: 0.2em 1em;
     margin: 0 0.5em;
     text-decoration: none;
-    font-size: 1.2em;
-    font-weight: bold;
+    font-size: 1em;
+    //font-weight: bold;
     border: solid 2px;
     line-height: 3em;
     transition: $transition;
     @include border-radius($border-radius);
     text-transform: uppercase;
-    background-color: aqua;
+    background-color: $prime;
+    color: white;
     
     @include bp(tablet) {
         padding: 0.5em 2em;

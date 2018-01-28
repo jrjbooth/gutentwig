@@ -1,0 +1,114 @@
+article.tease.tease-post {
+    margin: 0 0 1em 0;
+    @include border-radius($border-radius);
+    @extend .card;
+    position: relative;
+    min-width: 300px;
+
+    &:first-child {
+        margin: 1em 0;
+    }
+
+    > a {
+        position: absolute;
+        top: 0;
+        bottom: 50%;
+        left: 0;
+        right: 0;
+    }
+
+    > .category {
+        @include border-radius($border-radius);
+        @extend .shadow;
+
+        > .background-image {
+            height: 12em;
+            @include border-radius($border-radius);
+            @extend .shadow;
+
+            > .overlay {
+                height: 50%;
+                width: 100%;
+                @include linearGradient(transparentize(#000000, 0.3), transparentize(#000000, 1));
+                @include border-radius($border-radius $border-radius 0 0);
+                padding: 1em;
+                box-sizing: border-box;
+
+                > h3 {
+                    color: white;
+                    margin: 0;
+
+                }
+
+            }
+
+        }
+
+        > a {
+            text-decoration: none;
+
+            > h3 {
+                text-align: center;
+                margin: 0;
+                line-height: 2em;
+                color: white;
+
+            }
+
+        }
+
+    }
+
+    p {
+        //min-height: 5em;
+        padding: 0.5em;
+        margin: 0;
+        vertical-align: middle;
+        height: 7em;
+
+        //> .read-more {
+        //    //display: block;
+        //    @extend .button;
+        //    @extend .prime;
+        //}
+
+    }
+
+    @include bp(tablet) {
+        width: calc((100% / 2) - ( 1em / 2 ));
+        display: inline-block;
+        margin: 1em 0 0 0;
+        vertical-align: top;
+
+        &:first-child {
+            margin: 1em 0 0 0;
+        }
+
+        &:nth-child(2n) {
+            margin-left: 1em;
+
+        }
+
+    }
+
+    @include bp(desktop) {
+        width: calc((100% / 3) - (2em / 3));
+        display: inline-block;
+
+        &:nth-child(2n) {
+            margin: 1em 0 0 0;
+        }
+
+        &:nth-child(3n-1) {
+            margin-left: 1em;
+
+        }
+
+        &:nth-child(3n) {
+            margin-left: 1em;
+
+        }
+
+    }
+
+}

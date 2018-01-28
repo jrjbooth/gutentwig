@@ -1,0 +1,11 @@
+.blog-comment {
+    @extend .card;
+    padding: 1em;
+    margin: 0.5em;
+
+    > h4 {
+        margin: 0;
+
+    }
+
+}

@@ -5,4 +5,9 @@ jQuery( document ).ready( function( $ ) {
         $('#nav').toggleClass('closed');
     });
 
+    $('.comment-form').click( function () {
+        $(this).toggleClass('active');
+    });
+
+
 });

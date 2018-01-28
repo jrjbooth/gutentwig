@@ -1,0 +1,30 @@
+.comment-form {
+    @extend .card;
+    
+    > form {
+        display: none;
+    }
+
+    &.active {
+        height: fit-content;
+
+        > form {
+            display: block;
+            padding: 1em 1em 0 1em;
+            
+        }
+
+    }
+
+
+    > h3 {
+        margin: 0;
+        padding-left: 1em;
+        line-height: 2em;
+        @extend .card;
+        background-color: $dark;
+        color: $light-light;
+
+    }
+
+}

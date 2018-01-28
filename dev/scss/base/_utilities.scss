@@ -9,6 +9,11 @@ section {
 
 }
 
+.background-image {
+    background-size: contain;
+    background-position: center;
+}
+
 .shadow {
 
   @include box-shadow(0 3px 7px rgba(0,0,0,0.25));
@@ -17,6 +22,23 @@ section {
 
 .card {
     @extend .shadow;
+    @include border-radius($border-radius);
     background-color: white;
 
 }
+
+.category {
+    &.category-color-uncategorized {
+        background-color: $red;
+    }
+    &.category-color-blog {
+        background-color: $green;
+    }
+    &.category-color-review {
+        background-color: $purple;
+    }
+    &.category-color-project {
+        background-color: $yellow;
+    }
+}
+
